@@ -1,8 +1,7 @@
 const bookSchema = require("./server-schema");
 const Hapi = require("@hapi/hapi");
 const { nanoid } = require("nanoid");
-const dotenv = require("dotenv");
-dotenv.config();
+require("dotenv").config({ path: "src/config.env" });
 
 const init = async () => {
   const server = Hapi.server({
